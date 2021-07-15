@@ -53,7 +53,33 @@
 \def\myversion{1.0}
 
 
-\usepackage{hyperref}
+\newpairofpagestyles{firstpage}{%
+  \ihead{First Inner head}
+  \ohead{First Outer head}
+  \ifoot{%
+    %\hspace{-1em}
+    \raisebox{1cm}[0pt][0pt]{%
+      \begin{tabular}[t]{@{}l}
+      \textbf{An organization}\\
+      With an address\\
+      and communication channels
+      \end{tabular}
+    }
+  }
+  \cfoot{%
+    \raisebox{1cm}[0pt][0pt]{%
+      Footer on 1\textsuperscript{st} page only
+    }
+  }
+  \ofoot{%
+    \raisebox{0.25cm}[0pt][0pt]{%
+      {\fontsize{37}{44}\selectfont XYZ}
+      %\normalsize
+    }
+  }
+}
+
+\AtBeginDocument{\thispagestyle{firstpage}}
 \begin{document}
 
 \begin{flushright}
