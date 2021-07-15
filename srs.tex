@@ -17,11 +17,25 @@
 %http://karlwiegers.com
 \documentclass{scrreprt}
 \usepackage{scrhack}
-\usepackage{listings}
-\usepackage{underscore}
+
+
+\usepackage[english]{babel}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{xcolor}
+
+\usepackage[
+  markcase=noupper,
+  % headsepline,plainheadsepline,
+  % footsepline,plainfootsepline
+]{scrlayer-scrpage}% activates pagestyle scrheadings automatically
+\clearpairofpagestyles
+\ihead*{iHEAD}
+\ofoot*{\pagemark}
+
+
 \hypersetup{
     % bookmarks=false,    % show bookmarks bar?
     pdftitle={Software Requirement Specification},    % title
@@ -29,17 +43,16 @@
     pdfsubject={TeX and LaTeX},                        % subject of the document
     pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
     colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=blue,       % color of internal links
+    linkcolor=teal,       % color of internal links
     citecolor=black,       % color of links to bibliography
     filecolor=black,        % color of file links
     urlcolor=purple,        % color of external links
     linktoc=page            % only page is linked
 }%
-\def\myversion{1.0 }
-\date{}
-%\title{%
 
-%}
+\def\myversion{1.0}
+
+
 \usepackage{hyperref}
 \begin{document}
 
