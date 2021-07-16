@@ -23,6 +23,7 @@
 \usepackage[english]{babel}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
+\usepackage{lastpage}
 \usepackage{listings}
 \usepackage{underscore}
 \usepackage{xcolor}
@@ -34,7 +35,7 @@
 ]{scrlayer-scrpage}% activates pagestyle scrheadings automatically
 \clearpairofpagestyles
 \ihead*{iHEAD}
-\ofoot*{\pagemark}
+\ofoot*{Page \pagemark \hspace{0mm} of \pageref*{LastPage}}
 
 
 \hypersetup{
